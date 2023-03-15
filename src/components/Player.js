@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React, {useRef, useState} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
   faPlay,
@@ -22,19 +22,40 @@ const Player = ({currentSong, isPlaying, setIsPlaying }) => {
       setIsPlaying(!isPlaying)
     }  
   }
+  const timeUpdateHandler = (e) => {
+    const current = e.target.currentTime;
+    const duration = e.target.duration;
+    setSongInfo({...songInfo, currentTime: current, duration: duration})
+    console.log(e.target)
+  }
+  const getTime = (time) => {
+    return (
+      Math.floor(time / 60) + ':' + ('0' + Math.floor(time % 60)).slice(-2)
+    )
+  }
+  //STATE
+  const [ songInfo, setSongInfo ] = useState ({
+    currentTime: null,
+    duration: null,
+  })
+
     return (
         <div className={s.player}>
           <div className={s.tcontrol}>
-            <p>Start Time</p>
+            <p>{getTime(songInfo.currentTime)}</p>
             <input type="range" />
-            <p>End Time</p>
+            <p>{getTime(songInfo.duration)}</p>
           </div>
           <div className={s.pcontrol}>
             <FontAwesomeIcon className="skip-back" size="2x" icon={faAngleLeft} />
             <FontAwesomeIcon onClick={playSongHandler} className="play" size="2x" icon={faPlay} />
             <FontAwesomeIcon className="skip-forward" size="2x" icon={faAngleRight} />
           </div>
-          <audio ref={audioRef} src={currentSong.audio}></audio>
+          <audio 
+          onTimeUpdate={timeUpdateHandler}
+          onLoadedMetadata={timeUpdateHandler} 
+          ref={audioRef} 
+          src={currentSong.audio}></audio>
         </div>
     )
 }
