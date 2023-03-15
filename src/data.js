@@ -9,7 +9,7 @@ function chillHop() {
       audio: "https://mp3.chillhop.com/serve.php/?mp3=10075",
       color: ["#205950", "#2ab3bf"],
       id: uuidv4(),
-      active: true,
+      active: false,
     },
     {
       name: "Daylight",
@@ -64,12 +64,12 @@ function chillHop() {
     {
       name: "ثلاث دقات - أبو و يسرا",
       cover:
-      "https://avatars.yandex.net/get-music-content/4387391/58373e0e.a.15927592-1/150x150",
+      "https://pps.whatsapp.net/v/t61.24694-24/315778918_1345217752685870_8614231591179234987_n.jpg?ccb=11-4&oh=01_AdTq1CmyAwwDoa8P3ooE9orzYg1c0_F9kNeRWcbnJiotNw&oe=6418853C",
       artist: "3 Daqat - Abu Ft. Yousra",
       audio: "https://now.morsmusic.org/load/1398422386/Abu_Yousra_-_3_Daqat_(musmore.com).mp3",
       color: ["#205950", "#2ab3bf"],
       id: uuidv4(),
-      active: false,
+      active: true,
     },
     //ADD MORE HERE
   ];
