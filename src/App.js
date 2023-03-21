@@ -3,7 +3,8 @@ import Song from './components/Song';
 import Player from './components/Player';
 import Library from './components/Library';
 import './styles/app.module.css';
-import data from './data'
+import data from './data';
+import Nav from './components/Nav';
 
 function App() {
   //State
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <div className="App">
+      <Nav />
       <Song currentSong={currentSong} />
       <Player
         audioRef={audioRef}
