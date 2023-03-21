@@ -64,7 +64,7 @@ function chillHop() {
     {
       name: "ثلاث دقات - أبو و يسرا",
       cover:
-      "https://pps.whatsapp.net/v/t61.24694-24/315778918_1345217752685870_8614231591179234987_n.jpg?ccb=11-4&oh=01_AdTq1CmyAwwDoa8P3ooE9orzYg1c0_F9kNeRWcbnJiotNw&oe=6418853C",
+      "https://avatars.githubusercontent.com/u/107000157?v=4",
       artist: "3 Daqat - Abu Ft. Yousra",
       audio: "https://now.morsmusic.org/load/1398422386/Abu_Yousra_-_3_Daqat_(musmore.com).mp3",
       color: ["#205950", "#2ab3bf"],
