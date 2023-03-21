@@ -6,7 +6,7 @@ const LibrarySong = ({ song, songs, setCurrentSong, id }) => {
         setCurrentSong(song)
     }
     return (
-        <div onclick={songSelectHandler} className={s.librarySong}>
+        <div onClick={songSelectHandler} className={s.librarySong}>
         <img alt={song.name} src={song.cover}></img>
         <div className={s.songDescription}>
         <h3>{song.name}</h3>
